@@ -1,0 +1,4 @@
+# Ignore default executable
+
+*.log
+*.class
