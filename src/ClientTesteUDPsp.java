@@ -27,9 +27,8 @@ public class ClientTesteUDPsp {
             // aqui falta por a ler a msg dos args e claro como é obvio falta depois trocar o argumento
             //adress pelo valor que se le dos argumentos , a porta vai ser sempre a mesma , vamos usar a 5000
             //byte[] buf;
-            //System.out.println(args[0] + " " + args[1] + " " + args[2] + " " + args[3]);
-            String msg = args[0] + " " + args[1] + " " + args[2] + " " + args[3];
 
+            String msg = args[0] + " " + args[1] + " " + args[2] + " " + args[3];
 
 
             //String msg = "dnscl 10.2.2.1 example.com. MX R";

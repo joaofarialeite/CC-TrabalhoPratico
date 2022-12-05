@@ -15,7 +15,7 @@ class ServerWorkerUDP implements Runnable {
 /*    public ServerWorkerUDP(DatagramSocket socket, DatagramPacket packet,int port, int timeout, String debug, String path ) throws IOException {
         this.socket = socket;
         this.packet = packet;
-        this.sp = new Server(port, timeout, debug, path);
+        this.sp = new Joel.Server(port, timeout, debug, path);
     }*/
 
     public ServerWorkerUDP(DatagramSocket socket, DatagramPacket packet, SP sp) throws IOException {
@@ -42,7 +42,7 @@ class ServerWorkerUDP implements Runnable {
         try {
             //this.socket.receive(packet);
             //SP sp = new SP(5555, 0, "debug", "var/dns/configFiles/configurationFile.txt");
-            //Server sp = new Server(1);
+            //Joel.Server sp = new Joel.Server(1);
             //Resposta
             InetAddress address = packet.getAddress();
             int port = packet.getPort();
@@ -234,4 +234,3 @@ public class ServerTestarSP {
         }).start();
     }
 }
-
