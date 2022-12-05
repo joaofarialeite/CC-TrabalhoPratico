@@ -1,4 +1,15 @@
-# Ignore default executable
+# Ignore all
+*
 
+# Unignore all with extensions
+!*.*
+
+# Unignore the Makefile
+!Makefile
+
+# Unignore all dirs
+!*/
+
+# Ignore default executable
 *.log
 *.class
