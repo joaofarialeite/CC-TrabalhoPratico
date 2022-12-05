@@ -14,7 +14,7 @@ public class SS extends Server {
     public void fillWithData(String line) {
         if (line.startsWith("#") || line.isBlank()) return;
         this.SPDataCopy.add(line);
-        if (this.SPDataCopy.size() == super.getdbLines() ) {
+        if (this.SPDataCopy.size() == super.getNumberOfDBLines() ) {
             super.inicializaServidor(this.SPDataCopy);
         }
     }

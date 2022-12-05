@@ -7,7 +7,7 @@ import java.util.List;
 public class DataBaseFile {
     private ConfigurationFile cf;
     private List<String> dataForSP = new ArrayList<>();
-    private int lines_of_filedb = 0;
+    private int DBLines = 0;
 
     public DataBaseFile(ConfigurationFile cf) {
         this.cf = cf;
@@ -32,7 +32,7 @@ public class DataBaseFile {
                 System.out.println("Existem linhas inválidas no ficheiro de base de dados.");
                 continue;
             }
-            lines_of_filedb++;
+            DBLines++;
         }
         // escreve no ficheiro de log a entrada que corresponde à leitura da base de dados do servidor
         this.cf.getLf().writeIntoLogFile(this.cf.getLogFile(), "EV " + this.cf.getDD() + " db-file-read " + this.cf.getDB());
@@ -45,11 +45,11 @@ public class DataBaseFile {
         return this.dataForSP;
     }
 
-    public int getLines_of_filedb() {
-        return this.lines_of_filedb;
+    public int getDBLines() {
+        return this.DBLines;
     }
 
-    public void setLines_of_filedb(int lines_of_filedb) {
-        this.lines_of_filedb = lines_of_filedb;
+    public void setDBLines(int DBLines) {
+        this.DBLines = DBLines;
     }
 }

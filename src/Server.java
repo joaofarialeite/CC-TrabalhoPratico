@@ -22,7 +22,7 @@ public class Server {
     private Map<String, String> macros = new HashMap<>();
     private Map<String, String> alias = new HashMap<>();
     private Query q = new Query();
-    private int dbLines = 0;
+    private int numberOfDBLines = 0;
 
     public Server() throws IOException {
     }
@@ -236,11 +236,11 @@ public class Server {
         return this.path;
     }
 
-    public int getdbLines() {
-        return this.dbLines;
+    public int getNumberOfDBLines() {
+        return this.numberOfDBLines;
     }
 
-    public void setdbLines(int dbLines) {
-        this.dbLines = dbLines;
+    public void setNumberOfDBLines(int dbLines) {
+        this.numberOfDBLines = dbLines;
     }
 }
