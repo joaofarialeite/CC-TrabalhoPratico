@@ -22,6 +22,8 @@ public class Server {
     private Map<String, String> macros = new HashMap<>();
     private Map<String, String> alias = new HashMap<>();
     private Query q = new Query();
+    private LogFile lf = new LogFile();
+    private ConfigurationFile cf = new ConfigurationFile();
     private int numberOfDBLines = 0;
 
     public Server() throws IOException {
@@ -32,9 +34,11 @@ public class Server {
         this.time_out = time_out;
         this.modo_debug = modo_debug;
         this.path = path;
+        this.cf.readConfigurationFile(path);
     }
 
-    public void inicializaServidor(List<String> data) {
+    public void inicializaServidor(List<String> data) throws IOException {
+        this.lf.writeIntoLogFile(this.cf.getAllLogFile(), "ST " + this.cf.getDD() + " Port:" + this.port + " Time_Out:" + this.time_out + " Mode:" + this.modo_debug + " --- Servidor inicializado");
         /*
         faz uma procura pelas macros dentro do array de dados
          */
@@ -103,16 +107,30 @@ public class Server {
         }
     }
 
-    public String responseQueryCliente(String query) {
-        String[] splitQuery = query.split(" ");
+    public String responseQueryCliente(String query) throws IOException {
         List<String> aux = new ArrayList<>();
         int i = 0;
 
-        this.q.setMESSAGE_ID(ThreadLocalRandom.current().nextInt(1, 65535));
-        this.q.setQUERY_INFO_NAME(splitQuery[2]);
-        this.q.setQUERY_INFO_TYPE(splitQuery[3]);
-        this.q.setFLAGS("R+A");
-        this.q.setRESPONSE_CODE(0);                  // valor a alterar agora na segunda fase
+        if (query.contains(",")) {
+            String[] splitQuery = query.split(",");
+            this.q.setMESSAGE_ID(Integer.parseInt(splitQuery[0]));
+            this.q.setFLAGS(splitQuery[1]);
+            this.q.setRESPONSE_CODE(Integer.parseInt(splitQuery[2]));
+            this.q.setQUERY_INFO_TYPE(splitQuery[6].substring(0, splitQuery[6].length() - 1));
+            String[] splitByComma = splitQuery[5].split(";");
+            this.q.setQUERY_INFO_NAME(splitByComma[1]);
+        } else {
+            String[] splitQuery = query.split(" ");
+            this.q.setMESSAGE_ID(ThreadLocalRandom.current().nextInt(1, 65535));
+            this.q.setQUERY_INFO_NAME(splitQuery[2]);
+            this.q.setQUERY_INFO_TYPE(splitQuery[3]);
+            this.q.setFLAGS("R+A");
+            this.q.setRESPONSE_CODE(0);                  // valor a alterar agora na segunda fase
+        }
+        /*
+        escrita no ficheiro de log - query recebida
+         */
+        this.lf.writeIntoLogFile(this.cf.getLogFile(), "QR " + this.q.getMESSAGE_ID() + " Domain:" + this.q.getQUERY_INFO_NAME() + " Type:" + this.q.getQUERY_INFO_TYPE() + " Response_Code:" + this.q.getRESPONSE_CODE());
 
         StringBuilder response = new StringBuilder();
         response.append(this.q.getMESSAGE_ID()).append(',').append(this.q.getFLAGS()).append(',').append(this.q.getRESPONSE_CODE()).append(',');
@@ -120,7 +138,7 @@ public class Server {
         /*
         adiciona aos response_values os servidoresEmail que pertencem ao domínio que é enviado na query
          */
-        this.q.setRESPONSE_VALUES(this.servidoresEmailAUX.stream().filter(line -> line.startsWith(splitQuery[2])).toList());
+        this.q.setRESPONSE_VALUES(this.servidoresEmailAUX.stream().filter(line -> line.startsWith(this.q.getQUERY_INFO_NAME())).toList());
         this.q.setNUMBER_OF_VALUES(this.q.getRESPONSE_VALUES().size());
 
         /*
@@ -143,7 +161,7 @@ public class Server {
         /*
         adiciona aos authorities_values os servidoresEmail que pertencem ao domínio que é enviado na query
          */
-        this.q.setAUTHORITIES_VALUES(this.servidoresAutoritativosAUX.stream().filter(line -> line.startsWith(splitQuery[2])).toList());
+        this.q.setAUTHORITIES_VALUES(this.servidoresAutoritativosAUX.stream().filter(line -> line.startsWith(this.q.getQUERY_INFO_NAME())).toList());
         this.q.setNUMBER_OF_AUTHORITIES(this.q.getAUTHORITIES_VALUES().size());
 
         /*
@@ -215,8 +233,11 @@ public class Server {
                         .append(',').append(this.q.getQUERY_INFO_TYPE()).append(';').append('\n').append(firstA).append(';').append('\n').append(firstNS).append(firstMX);
                 break;
         }
-
-        System.out.println(response);
+        /*
+        escrita no ficheiro de log - resposta enviada
+         */
+        this.lf.writeIntoLogFile(this.cf.getLogFile(), "RE " + this.q.getMESSAGE_ID() + " Domain:" + this.q.getQUERY_INFO_NAME() + " Type:" + this.q.getQUERY_INFO_TYPE() + " Response_Code:" + this.q.getRESPONSE_CODE());
+        //System.out.println(response);
         return response.toString();
     }
 
@@ -240,7 +261,15 @@ public class Server {
         return this.numberOfDBLines;
     }
 
-    public void setNumberOfDBLines(int dbLines) {
-        this.numberOfDBLines = dbLines;
+    public void setNumberOfDBLines(int numberOfDBLines) {
+        this.numberOfDBLines = numberOfDBLines;
+    }
+
+    public ConfigurationFile getConfigurationFile() {
+        return this.cf;
+    }
+
+    public LogFile getLogFile() {
+        return this.lf;
     }
 }

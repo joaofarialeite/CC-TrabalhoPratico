@@ -30,6 +30,7 @@ public class DataBaseFile {
                 this.dataForSP.add(line);
             else {
                 System.out.println("Existem linhas inválidas no ficheiro de base de dados.");
+                this.cf.getLf().writeIntoLogFile(this.cf.getLogFile(), "FL " + this.cf.getSP() + " db-file-read - linhas inválidas nop ficheiro de dados do SP");
                 continue;
             }
             DBLines++;

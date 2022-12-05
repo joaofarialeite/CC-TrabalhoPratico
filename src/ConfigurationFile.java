@@ -14,27 +14,12 @@ public class ConfigurationFile {
     private String logFile = null;
     private String allLogFile = null;
     private LogFile lf = new LogFile();
-    private Map<String, String> IPePORTofSSeSPinCF = new HashMap<>();
+    private Map<String, String> serverPortAndAddress = new HashMap<>();
 
     private int PortSP = 0;
 
-    private
-
-    enum validCFValues {
-        DB,
-        SP,
-        SS,
-        DD,
-        ST,
-        LG
-    }
-
-    public boolean validCFString(String line) {
-        String[] parts = line.split(" ");
-        for (validCFValues v : validCFValues.values()) {
-            if (v.name().equals(parts[1])) return true;
-        }
-        return false;
+    public boolean validaCFValues(String v) {
+        return v.equals("DB") || v.equals("SP") || v.equals("SS") || v.equals("DD") || v.equals("ST") || v.equals("LG");
     }
 
     public void readConfigurationFile(String filePath) throws IOException {
@@ -44,8 +29,8 @@ public class ConfigurationFile {
         while (buffer.ready()) {
             String line = String.valueOf(buffer.readLine());
             if (line.startsWith("#") || line.isBlank()) continue;
-            if (validCFString(line)) {
-                String[] splitLine = line.split(" ");
+            String[] splitLine = line.split(" ");
+            if (validaCFValues(splitLine[1])) {
                 switch (splitLine[1]) {
                     case "DB":
                         this.DB = splitLine[2];
@@ -75,39 +60,37 @@ public class ConfigurationFile {
             }
         }
 
-        associaportaaip();
+        associatePortToIP();
 
         // escreve no ficheiro de log a entrada que corresponde a uma leitura do ficheiro de configuração
         this.lf.writeIntoLogFile(this.logFile, "EV".concat(" ").concat(this.DD.concat(" ").concat("conf-file-read").concat(" ").concat(filePath)));
-
 
 
         buffer.close();
         file.close();
     }
 
-    public void associaportaaip() {
-        if((this.SP) != null) {
+    public void associatePortToIP() {
+        if ((this.SP) != null) {
             String[] splitSP = this.SP.split(":");
-            if(this.SP.contains(":")){
-                this.IPePORTofSSeSPinCF.put(splitSP[0], splitSP[1]);
+            if (this.SP.contains(":")) {
+                this.serverPortAndAddress.put(splitSP[0], splitSP[1]);
                 this.PortSP = Integer.parseInt(splitSP[1]);
-            } else{
-                this.IPePORTofSSeSPinCF.put(this.SP, "5555");
+            } else {
+                this.serverPortAndAddress.put(this.SP, "5555");
                 this.PortSP = 5555;
             }
         }
 
         for (String s : this.SS) {
-            if(s!=null) {
+            if (s != null) {
                 if (s.contains(":")) {
                     String[] splitAddress = s.split(":");
-                    this.IPePORTofSSeSPinCF.put(splitAddress[0], splitAddress[1]);
-                } else IPePORTofSSeSPinCF.put(s, "5555");
+                    this.serverPortAndAddress.put(splitAddress[0], splitAddress[1]);
+                } else serverPortAndAddress.put(s, "5555");
             }
         }
     }
-
 
 
     public String getDomain() {
@@ -146,28 +129,16 @@ public class ConfigurationFile {
         return this.logFile;
     }
 
-    public void setLogFile(String logFile) {
-        this.logFile = logFile;
-    }
-
     public String getAllLogFile() {
         return this.allLogFile;
-    }
-
-    public void setAllLogFile(String allLogFile) {
-        this.allLogFile = allLogFile;
     }
 
     public String getST() {
         return this.ST;
     }
 
-    public void setST(String ST) {
-        this.ST = ST;
-    }
-
-    public Map<String, String> getIPePORTofSSeSPinCF() {
-        return new HashMap<String, String>(this.IPePORTofSSeSPinCF);
+    public Map<String, String> getServerPortAndAddress() {
+        return new HashMap<String, String>(this.serverPortAndAddress);
     }
 
     public LogFile getLf() {

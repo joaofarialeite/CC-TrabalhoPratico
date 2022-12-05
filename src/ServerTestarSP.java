@@ -73,12 +73,12 @@ class ServerWorkerTCP implements Runnable {
 
     // vai ao cf e verifica o dominio
     public boolean confirmadominio(String line) {
-        if (this.sp.cf.getDomain().equals(line)) return true;
+        if (this.sp.getConfigurationFile().getDomain().equals(line)) return true;
         else return false;
     }
 
     public void enviarficheiro(BufferedReader in, PrintWriter out) throws IOException {
-        FileReader file = new FileReader(sp.cf.getDB());
+        FileReader file = new FileReader(sp.getConfigurationFile().getDB());
         BufferedReader buffer = new BufferedReader(file);
         String line;
         if (((line = in.readLine()) == null)) {
@@ -111,7 +111,7 @@ class ServerWorkerTCP implements Runnable {
             String line;
             int contador = 0;
             // Confirma se o SS esta no seu CF ou seja se é
-            if ((sp.cf.getIPePORTofSSeSPinCF().containsKey(socket.getInetAddress().getHostAddress()))) {
+            if ((sp.getConfigurationFile().getServerPortAndAddress().containsKey(socket.getInetAddress().getHostAddress()))) {
                 //PRIMEIRO PASSO
                 //RECEBE O DOMINIO CONFIRMA E lanca o numero de linhas
                 while (!(socket.isClosed())) {
@@ -174,15 +174,13 @@ class ServerWorkerTCP implements Runnable {
 
 
 public class ServerTestarSP {
-
     // E METER OS FICHEIROS CORE E DB TUDO NA MESMA PASTA AO TESTAR NO CORE (OS CAMINHOS LA DAO ERROS)
 
     //CORE -> java ServerTestarSP 5555 12345 bash configurationFile-cc-lei-sp.txt
     //PC -> 5555 12345 true var/dns/configFiles/configurationFile-cc-lei-sp.txt
     //porta , timeout ,debug ,path
     public static void main(String[] args) throws IOException {
-
-        SP sp = new SP(Integer.parseInt(args[0]), Integer.parseInt(args[1]), (args[2]), args[3]);
+        SP sp = new SP(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
 
         new Thread(() -> {
             try (ServerSocket ssTCP = new ServerSocket(Integer.parseInt(args[0]))) {
@@ -211,5 +209,7 @@ public class ServerTestarSP {
                 e.printStackTrace();
             }
         }).start();
+        //sp.getLogFile().writeIntoLogFile(sp.getConfigurationFile().getAllLogFile(), "ST " + sp.getConfigurationFile().getDD() + " Port:" + args[0] + " Time_Out:" + args[1] + " Mode:" + args[2] + " --- Servidor desligado");
     }
+
 }

@@ -6,8 +6,6 @@ import java.net.Socket;
 
 public class ClienteTesteTCPeTZ {
 /*    static int Numerodelinhas;
-
-
     public void setNumerodelinhas(int numerodelinhas) {
         this.Numerodelinhas = numerodelinhas;
     }*/
