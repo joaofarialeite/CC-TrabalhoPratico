@@ -1,11 +1,10 @@
 # Configuration file for primary server for example.com
 
 example.com DB var/dns/dbFiles/example-com-db.txt
-example.com SS 193.123.5.189
-example.com SS 127.0.0.1:5554
-example.com SS 193.123.5.190:5353
-example.com SP 193:5353
-example.com DD 127.0.0
+example.com SS 193.137.100.250
+example.com SS 193.136.130.251:5353
+example.com SP 192.130.150.249:5555
+example.com DD 127.0.0.1
 example.com LG var/dns/logFiles/example-com.log
 all LG var/dns/logFiles/example-com-all.log
 

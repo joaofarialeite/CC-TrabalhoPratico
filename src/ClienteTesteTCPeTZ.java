@@ -38,7 +38,7 @@ public class ClienteTesteTCPeTZ {
                     if (response != null) {
                         System.out.println(response);
                         //Numerodelinhas = Integer.parseInt(response);
-                        ss.setDBlines(Integer.parseInt(response));
+                        ss.setdbLines(Integer.parseInt(response));
                     } else {
                         break;
                     }

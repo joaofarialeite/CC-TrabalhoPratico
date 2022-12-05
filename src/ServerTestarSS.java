@@ -67,7 +67,7 @@ class SSWorkerTCP implements Runnable {
     }
 
 
-    public SSWorkerTCP(Socket socket,SS ss) throws IOException {
+    public SSWorkerTCP(Socket socket, SS ss) throws IOException {
         this.socket = socket;
         this.ss = ss;
     }
@@ -126,7 +126,7 @@ class SSWorkerTDZ implements Runnable {
                     out.flush();
                     String response = in.readLine();
                     if (response != null) {
-                        ss.setDBlines(Integer.parseInt(response));
+                        ss.setdbLines(Integer.parseInt(response));
                     } else {
                         break;
                     }
@@ -135,8 +135,8 @@ class SSWorkerTDZ implements Runnable {
                 //Envia a segunda mensagem que escrevo que sera o "ok: 5"
                 if (contador == 1) {
 
-                    if(ss.getDBlines() <= 65535) { // tal como é pedido no relatorio
-                        out.println(ss.getDBlines());
+                    if(ss.getdbLines() <= 65535) { // tal como é pedido no relatorio
+                        out.println(ss.getdbLines());
                         out.flush();
                         socket.shutdownOutput();
                         break;
@@ -217,4 +217,3 @@ public class ServerTestarSS {
         }).start();
     }
 }
-
