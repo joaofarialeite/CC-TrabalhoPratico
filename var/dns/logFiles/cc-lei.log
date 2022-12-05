@@ -1,0 +1,248 @@
+24:11:2022.11:23:39:482 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:23:39:510 ST 127.0.0.1 12345 50000 modoDebug
+24:11:2022.11:24:37:702 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:24:37:724 ST 127.0.0.1 12345 50000 modoDebug
+24:11:2022.11:27:04:278 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:27:23:618 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:34:06:377 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:36:57:656 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:38:12:050 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:38:36:315 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:40:58:954 EV 127.0.0.1 conf-file-read TestarLerURL/src/configurationFile2.txt
+24:11:2022.11:42:29:702 EV 127.0.0.1 conf-file-read var/dns/configurationFile2.txt
+24:11:2022.11:45:59:880 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile2.txt
+24:11:2022.12:03:51:833 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile2.txt
+24:11:2022.11:01:15:934 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:01:15:951 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:01:15:952 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:01:39:458 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:01:43:881 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:01:43:897 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:01:43:898 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:01:51:126 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:02:22:598 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:02:22:617 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:02:22:619 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:02:27:668 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:03:22:184 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:03:22:204 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:03:22:205 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:03:25:097 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:03:52:040 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:03:52:062 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:03:52:063 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:03:53:848 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:04:36:474 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:04:36:501 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:04:36:503 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:04:38:438 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:05:22:612 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:05:22:629 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:05:22:630 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:05:27:410 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:07:41:161 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:07:41:180 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:07:41:180 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:07:44:250 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:08:11:382 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:08:11:397 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:08:11:398 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:08:15:065 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:08:32:819 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:08:32:836 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:08:32:838 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:08:37:107 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:09:14:636 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:09:14:654 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:09:14:655 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:09:19:208 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:09:19:229 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:09:19:230 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:09:22:582 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:11:08:188 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:11:08:202 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:11:08:204 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:11:11:175 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:13:19:368 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:13:19:386 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:13:19:386 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:13:22:604 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:14:34:391 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:14:34:419 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:14:34:422 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:14:38:376 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:15:22:785 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:15:22:803 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:15:22:804 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:15:26:199 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:19:49:348 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:19:49:362 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:19:49:363 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:19:53:756 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:21:20:882 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:21:20:902 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:21:20:903 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:21:24:639 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:22:09:027 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:22:09:041 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:22:09:042 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:22:18:575 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:23:55:367 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:23:55:388 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:23:55:389 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:25:29:606 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:25:29:621 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:25:29:622 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:25:47:108 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:25:47:125 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:25:47:126 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:26:34:714 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:26:34:731 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:26:34:732 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:26:38:236 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:27:15:580 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:27:43:803 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:27:43:817 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:27:43:818 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:27:47:082 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:28:21:938 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:28:21:957 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:28:21:958 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:28:25:480 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:28:49:728 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:28:49:745 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:28:49:746 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:28:54:922 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:40:43:651 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:40:47:656 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:40:47:682 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:40:47:684 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:42:39:263 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:44:48:772 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+24:11:2022.11:45:48:619 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:45:48:636 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:45:48:638 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:46:22:026 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+24:11:2022.11:46:22:039 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+24:11:2022.11:46:22:040 ST 127.0.0.1 5555 12345 true
+24:11:2022.11:46:26:062 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.12:22:13:814 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.12:22:13:835 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.12:22:13:836 ST 127.0.0.1 5555 12345 true
+25:11:2022.12:23:14:931 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.12:29:44:196 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.12:29:44:223 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.12:29:44:225 ST 127.0.0.1 5555 12345 true
+25:11:2022.12:29:53:819 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.12:48:18:293 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.12:48:18:312 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.12:48:18:313 ST 127.0.0.1 5555 12345 true
+25:11:2022.12:48:20:127 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.12:57:49:877 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.12:57:49:897 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.12:57:49:899 ST 127.0.0.1 5555 12345 true
+25:11:2022.12:57:52:357 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.01:03:17:796 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.01:03:17:825 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.01:03:17:827 ST 127.0.0.1 5555 12345 true
+25:11:2022.01:03:20:150 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.01:26:39:189 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.01:26:39:206 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.01:26:39:209 ST 127.0.0.1 5555 12345 true
+25:11:2022.01:26:41:391 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.01:29:22:586 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.01:29:22:611 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.01:29:22:612 ST 127.0.0.1 5555 12345 true
+25:11:2022.01:29:24:789 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.01:29:43:187 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.01:35:53:505 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.01:35:53:533 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.01:35:53:536 ST 127.0.0.1 5555 12345 true
+25:11:2022.01:36:48:375 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.01:38:39:288 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.01:38:39:303 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.01:38:39:304 ST 127.0.0.1 5555 12345 true
+25:11:2022.01:38:41:598 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.02:54:08:737 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.02:54:08:755 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.02:54:08:756 ST 127.0.0.1 5555 12345 true
+25:11:2022.02:54:10:681 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.02:54:10:716 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.02:54:10:718 ST 127.0.0.1 5555 12345 true
+25:11:2022.02:54:13:681 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.05:35:46:423 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.05:35:46:441 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.05:35:46:442 ST 127.0.0.1 5555 12345 true
+25:11:2022.05:35:53:234 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.05:42:27:647 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.05:42:27:672 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.05:42:27:674 ST 127.0.0.1 5555 12345 true
+25:11:2022.05:42:33:183 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.05:48:27:729 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.05:48:27:760 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.05:48:27:761 ST 127.0.0.1 5555 12345 true
+25:11:2022.05:48:54:423 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.05:50:25:136 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.05:50:25:160 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.05:50:25:161 ST 127.0.0.1 5555 12345 true
+25:11:2022.05:50:29:300 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+25:11:2022.05:52:23:160 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+25:11:2022.05:52:23:182 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+25:11:2022.05:52:23:183 ST 127.0.0.1 5555 12345 true
+25:11:2022.05:52:27:039 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+02:12:2022.06:22:54:974 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.06:22:55:003 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.06:22:55:004 ST 127.0.0.1 5555 12345 true
+02:12:2022.06:23:00:489 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+02:12:2022.06:54:46:281 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.06:54:46:304 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.06:54:46:305 ST 127.0.0.1 5555 12345 true
+02:12:2022.06:55:09:465 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.06:55:09:492 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.06:55:09:493 ST 127.0.0.1 5555 12345 true
+02:12:2022.06:56:12:477 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.06:56:12:501 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.06:56:12:502 ST 127.0.0.1 5555 12345 true
+02:12:2022.06:56:16:252 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.06:56:16:273 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.06:56:16:274 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:00:04:156 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:00:04:186 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:00:04:187 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:02:27:435 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:02:27:463 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:02:27:464 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:07:45:122 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:07:45:141 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:07:45:142 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:08:03:794 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:08:03:828 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:08:03:829 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:09:05:306 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:09:05:328 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:09:05:329 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:09:39:736 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:09:39:760 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:09:39:761 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:13:50:314 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:13:50:340 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:13:50:341 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:20:24:115 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:20:24:143 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:20:24:145 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:21:20:495 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:21:20:516 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:21:20:517 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:21:54:134 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:21:54:156 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:21:54:157 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:22:03:182 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:22:03:211 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:22:03:212 ST 127.0.0.1 5555 12345 true
+02:12:2022.07:28:05:951 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+02:12:2022.07:28:05:989 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+02:12:2022.07:28:05:990 ST 127.0.0.1 5555 12345 true
+05:12:2022.03:56:21:530 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-sp.txt
+05:12:2022.03:56:21:561 EV 127.0.0.1 db-file-read var/dns/dbFiles/dataBaseFile-cc-lei.txt
+05:12:2022.03:56:21:562 ST 127.0.0.1 5555 12345 true
+05:12:2022.03:56:27:240 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt

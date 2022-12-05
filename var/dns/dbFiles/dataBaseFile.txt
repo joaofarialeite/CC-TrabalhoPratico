@@ -1,0 +1,57 @@
+# Ficheiro de base de dados do dominio cc.lei
+# Inclui também um pointer para o seridor primario do subdminio g6e00.cc.lei
+
+@ DEFAULT cc.lei.
+TTL DEFAULT 86400
+
+#SOASP -> o valor indica o nome completo do SP do dominio indicado no parametro
+
+cc.lei. SOASP ns1.cc.lei. 86400
+
+#SOAADMIN -> o valor indica o endereco email completo do admininstrador do dominio
+
+cc.lei. SOAADMIN dns\.admin.example.com. 86400
+
+#SOAARESIAL -> o valor indica o numero de serie da base dados do SP do dominio indicado no parametro
+
+cc.lei. SOASERIAL 0117102022 86400
+
+#SOAREFRESH -> o valor indica o intervalo temporal em segundos para um SS perguntar ao SP do dominio indicado no parametro
+# qual o numero de serie da base de dados dessa zona
+
+cc.lei. SOAREFRESH 14400 86400
+
+#SOARETRY -> o valor indica o intervalo temporal para um SS voltar a perguntar ao SP do dominio indicado no parametro
+#qual o numero de serie da base de dados dessa zona, apos um timeout.
+
+cc.lei. SOARETRY 3600 86400
+
+#SOAEXPIRE -> o valor indica o intervalo temporal para um SS deixar de considerar a sua replica da base de dados
+#do dominio indicado no parametro como valida, deixando de responder a perguntas
+#sobre o dominio em causa, mesmo que continue a tentar contactar o SP respetivo;
+
+cc.lei. SOAEXPIRE 604800 86400
+
+#NS -> o valor indica o nome dum servidor que é autoritativo para o dominio indicado no parametro.
+
+cc.lei. NS ns1.cc.lei. 86400
+cc.lei. NS ns2.cc.lei. 86400
+
+g6e00.cc.lei. NS sp.g6e00.cc.lei. 86400
+
+#MX -> o valor indica o nome dum servidor de email para o dominio indicado no parametro;
+# este tipo de parametro suporta prioridades
+
+cc.lei. MX mx1.cc.lei 86400 10
+
+#A -> O valor indica o endereco ipv4 de um host/serviodr indicado no parametro como nome
+#basicamente vao ser os A vao ser os SS/SP do dominio ( aqui adiciona-se um ss que nao esta no cf o Cigarra)
+#DUVIDA O NS1 TEM DE SER O SP DO SERVIDOR PRIMARIO???????????
+
+ns1 A 10.2.2.1 86400
+ns2 A 10.3.3.1 86400
+sp.g6e00 A 10.3.3.2 86400
+mx1 A 10.3.3.3 86400
+sp CNAME ns1 86400
+ss1 CNAME ns2 86400
+mail1 CNAME mx1 86400
