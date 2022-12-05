@@ -126,7 +126,7 @@ class SSWorkerTDZ implements Runnable {
                     out.flush();
                     String response = in.readLine();
                     if (response != null) {
-                        ss.setdbLines(Integer.parseInt(response));
+                        ss.setNumberOfDBLines(Integer.parseInt(response));
                     } else {
                         break;
                     }
@@ -135,8 +135,8 @@ class SSWorkerTDZ implements Runnable {
                 //Envia a segunda mensagem que escrevo que sera o "ok: 5"
                 if (contador == 1) {
 
-                    if(ss.getdbLines() <= 65535) { // tal como é pedido no relatorio
-                        out.println(ss.getdbLines());
+                    if(ss.getNumberOfDBLines() <= 65535) { // tal como é pedido no relatorio
+                        out.println(ss.getNumberOfDBLines());
                         out.flush();
                         socket.shutdownOutput();
                         break;

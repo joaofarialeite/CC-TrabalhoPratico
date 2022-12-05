@@ -60,7 +60,6 @@ class ServerWorkerUDP implements Runnable {
 }
 
 class ServerWorkerTCP implements Runnable {
-
     //private final Register register;
     private Socket socket;
     private ArrayList<String> linhasdodb;
@@ -68,7 +67,7 @@ class ServerWorkerTCP implements Runnable {
     private SP sp;
 
     public int numerodelinhas() {
-        return this.sp.dbf.getLines_of_filedb();
+        return this.sp.dbf.getDBLines();
     }
 
 
@@ -79,7 +78,6 @@ class ServerWorkerTCP implements Runnable {
     }
 
     public void enviarficheiro(BufferedReader in, PrintWriter out) throws IOException {
-
         FileReader file = new FileReader(sp.cf.getDB());
         BufferedReader buffer = new BufferedReader(file);
         String line;
@@ -95,7 +93,7 @@ class ServerWorkerTCP implements Runnable {
     public static void printMap(Map mp) {
         Iterator it = mp.entrySet().iterator();
         while (it.hasNext()) {
-            Map.Entry pairs = (Map.Entry)it.next();
+            Map.Entry pairs = (Map.Entry) it.next();
             System.out.println(pairs.getKey() + " = " + pairs.getValue());
             it.remove();
         }
@@ -110,15 +108,10 @@ class ServerWorkerTCP implements Runnable {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter out = new PrintWriter(socket.getOutputStream());
-
             String line;
             int contador = 0;
-
-
             // Confirma se o SS esta no seu CF ou seja se é
-            if((sp.cf.getIPePORTofSSeSPinCF().containsKey(socket.getInetAddress().getHostAddress()))) {
-
-
+            if ((sp.cf.getIPePORTofSSeSPinCF().containsKey(socket.getInetAddress().getHostAddress()))) {
                 //PRIMEIRO PASSO
                 //RECEBE O DOMINIO CONFIRMA E lanca o numero de linhas
                 while (!(socket.isClosed())) {
@@ -134,7 +127,7 @@ class ServerWorkerTCP implements Runnable {
                         }
                         //System.out.println(line);
                     }
-;
+                    ;
                     //System.out.println(line);
                     if ((line = in.readLine()) != null) {
                         if (Integer.parseInt(line) == numerodelinhas()) {
@@ -146,8 +139,6 @@ class ServerWorkerTCP implements Runnable {
                             //break;
                         }
                     }
-
-
                     enviarficheiro(in, out);
 
                     Thread.sleep(200);
@@ -157,40 +148,28 @@ class ServerWorkerTCP implements Runnable {
                         socket.shutdownInput();
                         socket.close();
                     }
-
-                    if(!socket.isClosed()) {
+                    if (!socket.isClosed()) {
                         socket.shutdownOutput();
                         socket.shutdownInput();
                         socket.close();
                     }
-
                 }
-
-            }else {
-
+            } else {
                 // caso nao seja uma conexão para transferencia de zona funciona como um echo servidor responde a queries por tcp
-
                 if ((line = in.readLine()) != null) {
                     out.println(sp.responseQueryCliente(line));
                     out.flush();
                 }
-
                 socket.shutdownOutput();
                 socket.shutdownInput();
                 socket.close();
             }
-
-
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-
     }
-
-
 }
 
 
@@ -203,7 +182,7 @@ public class ServerTestarSP {
     //porta , timeout ,debug ,path
     public static void main(String[] args) throws IOException {
 
-        SP sp = new SP(Integer.parseInt(args[0]),Integer.parseInt(args[1]),(args[2]), args[3]);
+        SP sp = new SP(Integer.parseInt(args[0]), Integer.parseInt(args[1]), (args[2]), args[3]);
 
         new Thread(() -> {
             try (ServerSocket ssTCP = new ServerSocket(Integer.parseInt(args[0]))) {
