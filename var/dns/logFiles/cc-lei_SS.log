@@ -42,3 +42,10 @@
 05:12:2022.10:48:49:675 ZT 127.0.0.1:5555 Transferência de zona concluída com sucesso
 05:12:2022.10:49:17:834 QR 36354 Domain:cc.lei. Type:MX Response_Code:0
 05:12:2022.10:49:17:839 RE 36354 Domain:cc.lei. Type:MX Response_Code:0
+12:12:2022.01:19:42:388 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+12:12:2022.01:20:31:573 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+12:12:2022.01:20:45:698 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+12:12:2022.01:37:57:639 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+12:12:2022.01:38:55:712 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+12:12:2022.01:39:15:299 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt
+12:12:2022.01:39:29:211 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile-cc-lei-ss.txt

@@ -10,7 +10,7 @@ class ServerWorkerUDP implements Runnable {
     //private byte[] buf = new byte[65535];
     private DatagramSocket socket;
 
-    private SP sp;
+    private Server sp;
 
 /*    public ServerWorkerUDP(DatagramSocket socket, DatagramPacket packet,int port, int timeout, String debug, String path ) throws IOException {
         this.socket = socket;
@@ -48,7 +48,7 @@ class ServerWorkerUDP implements Runnable {
             int port = packet.getPort();
             //byte[] bytes = ("ola").getBytes();
             //byte[] bytes = (sp.responseQueryCliente("dnscl 10.2.2.1 example.com. MX")).getBytes();
-            byte[] bytes = (sp.responseQueryCliente(data(packet.getData()))).getBytes();
+            byte[] bytes = (sp.response(data(packet.getData()))).getBytes();
             DatagramPacket resposta = new DatagramPacket(bytes, bytes.length, address, port);
             //DatagramSocket novoSocket = new DatagramSocket(port);
             socket.send(resposta);
@@ -157,7 +157,7 @@ class ServerWorkerTCP implements Runnable {
             } else {
                 // caso nao seja uma conexão para transferencia de zona funciona como um echo servidor responde a queries por tcp
                 if ((line = in.readLine()) != null) {
-                    out.println(sp.responseQueryCliente(line));
+                    out.println(sp.response(line));
                     out.flush();
                 }
                 socket.shutdownOutput();

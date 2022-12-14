@@ -5,7 +5,6 @@ public class SP extends Server {
 
     public SP(int port, int time_out, String modo_debug, String path) throws IOException {
         super(port, time_out, modo_debug, path);
-        this.dbf.readDataBaseFile(super.getConfigurationFile().getDB());
-        super.inicializaServidor(this.dbf.getDataForSP());
+        this.dbf.readDataBaseFile(super.getConfigurationFile().getDB(), super.getCache());
     }
 }

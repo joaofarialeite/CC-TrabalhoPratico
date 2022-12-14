@@ -7,6 +7,3 @@ cc.lei DD 127.0.0.1
 cc.lei LG var/dns/logFiles/cc-lei_SP.log
 all LG var/dns/logFiles/cc-lei-all_SP.log
 root ST var/dns/rootservers.db
-05:12:2022.10:40:04:377 ST 127.0.0.1 Port:5555 Time_Out:12345 Mode:true --- Servidor inicializado
-05:12:2022.10:43:26:217 ST 127.0.0.1 Port:5555 Time_Out:12345 Mode:true --- Servidor inicializado
-05:12:2022.10:44:08:892 ST 127.0.0.1 Port:5555 Time_Out:12345 Mode:true --- Servidor inicializado

@@ -13,7 +13,7 @@ public class ClienteTesteTCPeTZ {
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket("localhost", 5555);
 
-        SS ss =  new SS(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
+        SS ss = new SS(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
   /*      ss.fillWithData("cc.lei. SOAADMIN dns.admin.example.com. 86400");
         //ss.fillWithData("cc.lei. SOAADMIN dns.admin.example.com. 86400");
         System.out.println("SOAADMIN" + ss.getSOAADMIN());*/
@@ -63,7 +63,6 @@ public class ClienteTesteTCPeTZ {
 
             //ss.readSSData();
 
-            System.out.println(ss.responseQueryCliente("dnscl 10.2.2.1 example.com. MX"));
 /*            int i = 0;
             for(String c : ss.getSPDataCopy()){
                 System.out.println( i + c);

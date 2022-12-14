@@ -15,6 +15,7 @@ public class ConfigurationFile {
     private String allLogFile = null;
     private LogFile lf = new LogFile();
     private Map<String, String> serverPortAndAddress = new HashMap<>();
+    private List<String> rootServers = new ArrayList<>();
 
     private int PortSP = 0;
 
@@ -60,6 +61,15 @@ public class ConfigurationFile {
             }
         }
 
+        file = new FileReader(this.ST);
+        buffer = new BufferedReader(file);
+
+        while (buffer.ready()) {
+            String line = String.valueOf(buffer.readLine());
+            if (line.startsWith("#") || line.isBlank()) continue;
+            else this.rootServers.add(line);
+        }
+
         associatePortToIP();
 
         // escreve no ficheiro de log a entrada que corresponde a uma leitura do ficheiro de configuração
@@ -69,6 +79,7 @@ public class ConfigurationFile {
         buffer.close();
         file.close();
     }
+
 
     public void associatePortToIP() {
         if ((this.SP) != null) {
@@ -146,6 +157,10 @@ public class ConfigurationFile {
     }
 
     public int getPortSP() {
-        return PortSP;
+        return this.PortSP;
+    }
+
+    public List<String> getRootServers() {
+        return this.rootServers;
     }
 }

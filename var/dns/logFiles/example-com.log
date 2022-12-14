@@ -1,0 +1,196 @@
+14:12:2022.12:08:30:560 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.12:08:30:638 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:08:10:712 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:08:10:790 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:08:10:811 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:08:10:820 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:09:23:353 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:09:23:426 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:09:23:440 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:09:23:449 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:10:33:064 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:10:33:142 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:10:33:160 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:10:33:168 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:12:38:732 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:12:38:816 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:12:38:831 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:12:38:837 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:22:07:977 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:22:08:058 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:22:08:077 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:22:08:086 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:22:27:808 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:22:27:912 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:22:27:933 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:22:27:944 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:23:13:627 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:23:13:692 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:23:13:707 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:23:13:716 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:23:41:137 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:23:41:196 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:23:41:212 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:23:41:219 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:25:01:241 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:25:01:345 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:25:01:391 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:25:01:409 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:25:22:859 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:25:22:932 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:25:22:950 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:25:22:959 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:27:21:252 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:27:21:350 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:27:21:365 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:27:21:376 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:28:40:896 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:28:40:976 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:28:41:002 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:28:41:018 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:28:56:033 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:28:56:103 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:28:56:118 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:28:56:126 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:29:17:881 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:29:17:943 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:29:17:957 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:29:17:965 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:10:131 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:31:10:211 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:31:10:230 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:10:240 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:22:912 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:31:22:994 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:31:23:014 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:23:023 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:34:809 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:31:34:905 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:31:34:926 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:34:936 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:50:289 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:31:50:369 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:31:50:393 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:31:50:403 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:32:08:598 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:32:08:665 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:32:08:681 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:32:08:690 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:34:00:770 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:34:00:865 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:34:00:906 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:34:00:932 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:36:30:820 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:36:30:912 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:36:30:933 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:36:30:945 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:36:56:534 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:36:56:615 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:36:56:635 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:36:56:642 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:37:12:028 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:37:12:101 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:37:12:121 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:37:12:129 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:37:25:380 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:37:25:451 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:37:25:469 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:37:25:477 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:37:55:567 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:37:55:638 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:37:55:655 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:37:55:661 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:12:067 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:38:12:150 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:38:12:169 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:12:179 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:33:718 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:38:33:784 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:38:33:802 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:33:812 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:45:037 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:38:45:104 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:38:45:122 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:45:130 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:58:482 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:38:58:556 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:38:58:572 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:38:58:578 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:39:09:988 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:39:10:062 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:39:10:080 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:39:10:090 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:39:20:953 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.01:39:21:051 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.01:39:21:077 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.01:39:21:090 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:12:35:188 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:12:35:274 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:12:35:308 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:12:35:318 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:14:01:838 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:14:01:913 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:18:37:555 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:18:37:643 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:18:37:663 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:18:37:671 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:19:15:999 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:19:16:107 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:19:16:140 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:19:16:151 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:20:06:615 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:20:06:714 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:20:06:732 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:20:06:742 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:21:32:686 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:21:32:751 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:21:32:767 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:21:32:776 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:24:09:507 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:24:09:611 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:24:09:635 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:24:09:647 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:24:28:659 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:24:28:727 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:24:28:742 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:24:28:749 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:25:00:545 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:25:00:629 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:25:00:650 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:25:00:660 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:26:42:065 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:26:42:149 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:26:42:170 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:26:42:180 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:27:20:991 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:27:21:070 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:27:21:088 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:27:21:098 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:27:34:873 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:27:34:949 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:27:34:967 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:27:34:974 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:28:00:621 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:28:00:706 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:28:00:731 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:28:00:741 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:29:10:724 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:29:10:790 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:29:10:805 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:29:10:813 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:31:10:774 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:31:10:835 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:31:10:851 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:31:10:860 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:31:21:807 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:31:21:906 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:31:21:926 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:31:21:935 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:32:10:930 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:32:11:011 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:32:11:034 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:32:11:044 RE 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:33:59:652 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+14:12:2022.02:33:59:724 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+14:12:2022.02:33:59:740 QR 0 Domain:null Type:null Response_Code:0
+14:12:2022.02:33:59:747 RE 0 Domain:null Type:null Response_Code:0

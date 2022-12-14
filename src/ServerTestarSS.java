@@ -7,7 +7,7 @@ class SSWorkerUDP implements Runnable {
 
     private DatagramSocket socket;
 
-    private SS ss;
+    private Server ss;
 
 
     public SSWorkerUDP(DatagramSocket socket, DatagramPacket packet, SS ss) throws IOException {
@@ -33,7 +33,7 @@ class SSWorkerUDP implements Runnable {
 
             InetAddress address = packet.getAddress();
             int port = packet.getPort();
-            byte[] bytes = (ss.responseQueryCliente(data(packet.getData()))).getBytes();
+            byte[] bytes = (ss.response(data(packet.getData()))).getBytes();
             DatagramPacket resposta = new DatagramPacket(bytes, bytes.length, address, port);
 
             socket.send(resposta);
@@ -79,7 +79,7 @@ class SSWorkerTCP implements Runnable {
             //responde a queries também por tcp.
 
             if ((line = in.readLine()) != null) {
-                out.println(ss.responseQueryCliente(line));
+                out.println(ss.response(line));
                 out.flush();
             }
 
