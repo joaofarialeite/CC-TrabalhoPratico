@@ -4,6 +4,6 @@ cc.lei DB var/dns/dbFiles/dataBaseFile-cc-lei.txt
 cc.lei SS 10.3.3.1:5550
 cc.lei SS 127.0.0.1:5550
 cc.lei DD 127.0.0.1
-cc.lei LG var/dns/logFiles/cc-lei.log
-all LG var/dns/logFiles/cc-lei-all.log
+cc.lei LG var/dns/logFiles/cc-lei_SP.log
+all LG var/dns/logFiles/cc-lei-all_SP.log
 root ST var/dns/rootservers.db

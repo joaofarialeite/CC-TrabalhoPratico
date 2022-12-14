@@ -1,20 +1,20 @@
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        /*SS ss =  new SS(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
-        ss.fillWithData("cc.lei. SOAADMIN dns.admin.example.com. 86400");
-        ss.fillWithData("cc.lei. SOAADMIN dns.admin.example.com. 86400");
-        ss.readSSData();
-        System.out.println("SOAADMIN" + ss.getSOAADMIN());*/
+        Server sp = new SP(5555, 50000, "debug", "var/dns/configFiles/configurationFile.txt");
+        //System.out.println(sp.getCache().getLines());
+        sp.response("dnscl 193.136.130.250 example.com. MX R");
+        //sp.response("3874,Q,0,0,0,0;example.com.,NS;");
+        //Server ss = new SS(5555, 50000, "debug", "var/dns/configFiles/configurationFile.txt");
 
-        /*ConfigurationFile cf = new ConfigurationFile();
-        cf.readConfigurationFile("var/dns/configFiles/configurationFile.txt");
-        DataBaseFile_new dbf = new DataBaseFile_new(cf);
-        dbf.readDataBaseFile(cf.getDB());*/
-        //SP_new sp = new SP_new(5555, 50000, "debug", "var/dns/configFiles/configurationFile.txt");
-        //sp.responseBySP("dnscl 193.137.100.250 example.com. A R");
-        //s.responseQueryCliente("dnscl 193.137.100.250 example.com. A R");
+        /*SS ss = new SS(5555, 50000, "debug", "var/dns/configFiles/configurationFile.txt");
+        ss.fillWithData("ns1 A 193.136.130.250 TTL");
+        ss.inicializaServidor(ss.getCache().getLines());
+        System.out.println(ss.getIPAdressesAUX());*/
     }
 }

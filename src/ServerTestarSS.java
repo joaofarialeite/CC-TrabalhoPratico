@@ -7,11 +7,10 @@ class SSWorkerUDP implements Runnable {
 
     private DatagramSocket socket;
 
-    private SS ss;
+    private Server ss;
 
 
-
-    public SSWorkerUDP(DatagramSocket socket,DatagramPacket packet, SS ss) throws IOException {
+    public SSWorkerUDP(DatagramSocket socket, DatagramPacket packet, SS ss) throws IOException {
         this.socket = socket;
         this.packet = packet;
         this.ss = ss;
@@ -34,7 +33,7 @@ class SSWorkerUDP implements Runnable {
 
             InetAddress address = packet.getAddress();
             int port = packet.getPort();
-            byte[] bytes = (ss.responseQueryCliente(data(packet.getData()))).getBytes();
+            byte[] bytes = (ss.response(data(packet.getData()))).getBytes();
             DatagramPacket resposta = new DatagramPacket(bytes, bytes.length, address, port);
 
             socket.send(resposta);
@@ -46,15 +45,12 @@ class SSWorkerUDP implements Runnable {
 }
 
 class SSWorkerTCP implements Runnable {
-
-
     private Socket socket;
     private SS ss;
 
-
     public void enviarficheiro(BufferedReader in, PrintWriter out) throws IOException {
 
-        FileReader file = new FileReader(ss.cf.getDB());
+        FileReader file = new FileReader(ss.getConfigurationFile().getDB());
         BufferedReader buffer = new BufferedReader(file);
         String line;
         if (((line = in.readLine()) == null)) {
@@ -65,7 +61,6 @@ class SSWorkerTCP implements Runnable {
             }
         }
     }
-
 
     public SSWorkerTCP(Socket socket, SS ss) throws IOException {
         this.socket = socket;
@@ -84,7 +79,7 @@ class SSWorkerTCP implements Runnable {
             //responde a queries também por tcp.
 
             if ((line = in.readLine()) != null) {
-                out.println(ss.responseQueryCliente(line));
+                out.println(ss.response(line));
                 out.flush();
             }
 
@@ -92,8 +87,7 @@ class SSWorkerTCP implements Runnable {
             socket.shutdownInput();
             socket.close();
 
-
-            } catch (IOException ex) {
+        } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
     }
@@ -101,11 +95,8 @@ class SSWorkerTCP implements Runnable {
 
 
 class SSWorkerTDZ implements Runnable {
-
-
     private Socket socket;
     private SS ss;
-
 
     public SSWorkerTDZ(Socket socket, SS ss) throws IOException {
         this.socket = socket;
@@ -116,13 +107,11 @@ class SSWorkerTDZ implements Runnable {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter out = new PrintWriter(socket.getOutputStream());
-
-
             String serverResponse;
             int contador = 0;
             while ((contador <= 1)) {
                 if (contador == 0) {
-                    out.println(ss.cf.getDomain());
+                    out.println(ss.getConfigurationFile().getDomain());
                     out.flush();
                     String response = in.readLine();
                     if (response != null) {
@@ -130,33 +119,24 @@ class SSWorkerTDZ implements Runnable {
                     } else {
                         break;
                     }
-
                 }
                 //Envia a segunda mensagem que escrevo que sera o "ok: 5"
                 if (contador == 1) {
-
-                    if(ss.getNumberOfDBLines() <= 65535) { // tal como é pedido no relatorio
+                    if (ss.getNumberOfDBLines() <= 65535) { // tal como é pedido no relatorio
                         out.println(ss.getNumberOfDBLines());
                         out.flush();
                         socket.shutdownOutput();
                         break;
-                    }
-                    else{
+                    } else {
                         break;
                     }
                 }
                 contador++;
             }
-
-
-
             while ((serverResponse = in.readLine()) != null) {
                 ss.fillWithData(serverResponse);
             }
-
-
             socket.close();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -165,7 +145,6 @@ class SSWorkerTDZ implements Runnable {
 
 
 public class ServerTestarSS {
-
     // NAO ESQUECER DE MUDAR O CONFIGURATIONFILE PARA O SP PASSAR A SER O SERVIDOR1 E NAO O PCWINDOWS
     // E METER OS FICHEIROS CORE E DB TUDO NA MESMA PASTA AO TESTAR NO CORE (OS CAMINHOS LA DAO ERROS)
 
@@ -173,18 +152,14 @@ public class ServerTestarSS {
     //PC -> 5550 12345 true var/dns/configFiles/configurationFile-cc-lei-ss.txt
     //porta , timeout ,debug ,path
     public static void main(String[] args) throws IOException {
-
-
-        SS ss = new SS(Integer.parseInt(args[0]),Integer.parseInt(args[1]),(args[2]), args[3]);
-
-
+        SS ss = new SS(Integer.parseInt(args[0]), Integer.parseInt(args[1]), (args[2]), args[3]);
         try {
             //Socket socketTCPTZ = new Socket("localhost", ss.cf.getPortSP()); // Aqui no core da erro
             Socket socketTCPTZ = new Socket("localhost", 5555);
             Thread workerTCPTZ = new Thread(new SSWorkerTDZ(socketTCPTZ, ss));
             workerTCPTZ.start();
             workerTCPTZ.join();
-        }catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
