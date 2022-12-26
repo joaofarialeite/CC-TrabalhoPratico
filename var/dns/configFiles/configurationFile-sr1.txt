@@ -1,0 +1,4 @@
+#Configuration File do servidor resolver1
+
+all LG var/dns/logFiles/sr1.log
+root ST var/dns/rootServers/rootservers.txt

@@ -1,0 +1,8 @@
+#Ficheiro de base de dados com os servidores de topo
+
+
+. NS st1. 86400
+. NS st2. 86400
+
+st1. A 10.0.17.11 86400
+st2. A 10.0.13.11 86400

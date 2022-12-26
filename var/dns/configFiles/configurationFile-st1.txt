@@ -1,0 +1,4 @@
+# Ficheiro de Configuracao para o servidor de topo 1 (ST)1
+
+. DB var/dns/dbFiles/dataBaseFile-st.txt
+all LG var/dns/logFiles/all_ST1.log

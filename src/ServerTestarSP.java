@@ -12,13 +12,7 @@ class ServerWorkerUDP implements Runnable {
 
     private Server sp;
 
-/*    public ServerWorkerUDP(DatagramSocket socket, DatagramPacket packet,int port, int timeout, String debug, String path ) throws IOException {
-        this.socket = socket;
-        this.packet = packet;
-        this.sp = new Joel.Server(port, timeout, debug, path);
-    }*/
-
-    public ServerWorkerUDP(DatagramSocket socket, DatagramPacket packet, SP sp) throws IOException {
+    public ServerWorkerUDP(DatagramSocket socket, DatagramPacket packet, Server sp) throws IOException {
         this.socket = socket;
         this.packet = packet;
         this.sp = sp;
@@ -41,13 +35,9 @@ class ServerWorkerUDP implements Runnable {
         //DatagramSocket s = new DatagramSocket(null);  s.bind(new InetSocketAddress(8888))
         try {
             //this.socket.receive(packet);
-            //SP sp = new SP(5555, 0, "debug", "var/dns/configFiles/configurationFile.txt");
-            //Joel.Server sp = new Joel.Server(1);
             //Resposta
             InetAddress address = packet.getAddress();
             int port = packet.getPort();
-            //byte[] bytes = ("ola").getBytes();
-            //byte[] bytes = (sp.responseQueryCliente("dnscl 10.2.2.1 example.com. MX")).getBytes();
             byte[] bytes = (sp.response(data(packet.getData()))).getBytes();
             DatagramPacket resposta = new DatagramPacket(bytes, bytes.length, address, port);
             //DatagramSocket novoSocket = new DatagramSocket(port);
@@ -64,7 +54,7 @@ class ServerWorkerTCP implements Runnable {
     private Socket socket;
     private ArrayList<String> linhasdodb;
     private int linhas_enviadas = 0;
-    private SP sp;
+    private Server sp;
 
     public int numerodelinhas() {
         return this.sp.dbf.getDBLines();
@@ -99,7 +89,7 @@ class ServerWorkerTCP implements Runnable {
         }
     }
 
-    public ServerWorkerTCP(Socket socket, SP sp) throws IOException {
+    public ServerWorkerTCP(Socket socket, Server sp) throws IOException {
         this.socket = socket;
         this.sp = sp;
     }
@@ -110,7 +100,6 @@ class ServerWorkerTCP implements Runnable {
             PrintWriter out = new PrintWriter(socket.getOutputStream());
             String line;
             int contador = 0;
-            // Confirma se o SS esta no seu CF ou seja se é
             if ((sp.getConfigurationFile().getServerPortAndAddress().containsKey(socket.getInetAddress().getHostAddress()))) {
                 //PRIMEIRO PASSO
                 //RECEBE O DOMINIO CONFIRMA E lanca o numero de linhas
@@ -125,10 +114,8 @@ class ServerWorkerTCP implements Runnable {
                             socket.shutdownInput();
                             socket.close();
                         }
-                        //System.out.println(line);
                     }
-                    ;
-                    //System.out.println(line);
+
                     if ((line = in.readLine()) != null) {
                         if (Integer.parseInt(line) == numerodelinhas()) {
                             //out.println("Tudo certo, vou comecar a transferir");
@@ -176,11 +163,11 @@ class ServerWorkerTCP implements Runnable {
 public class ServerTestarSP {
     // E METER OS FICHEIROS CORE E DB TUDO NA MESMA PASTA AO TESTAR NO CORE (OS CAMINHOS LA DAO ERROS)
 
-    //CORE -> java ServerTestarSP 5555 12345 bash configurationFile-cc-lei-sp.txt
-    //PC -> 5555 12345 true var/dns/configFiles/configurationFile-cc-lei-sp.txt
+    //CORE -> java ServerTestarSP 5555 12345 bash configurationFile-cc-lei-sp1.txt
+    //PC -> 5555 12345 true var/dns/configFiles/configurationFile-cc-lei-sp1.txt
     //porta , timeout ,debug ,path
     public static void main(String[] args) throws IOException {
-        SP sp = new SP(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
+        Server sp = new Server(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
 
         new Thread(() -> {
             try (ServerSocket ssTCP = new ServerSocket(Integer.parseInt(args[0]))) {

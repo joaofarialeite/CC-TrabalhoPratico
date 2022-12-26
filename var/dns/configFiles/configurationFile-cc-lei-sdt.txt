@@ -1,0 +1,6 @@
+# Ficheiro de Configuracao para o servidor de TOPO(SDT) do dominio cc.lei 
+
+cc.lei DB var/dns/dbFiles/dataBaseFile-cc-lei-sdt.txt
+cc.lei LG var/dns/logFiles/cc-lei_SDT.log
+all LG var/dns/logFiles/cc-lei-all_SDT.log
+root ST var/dns/rootServers/rootservers.txt

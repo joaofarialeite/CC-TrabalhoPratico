@@ -1,0 +1,38 @@
+# Ficheiro de base de dados do SDT de cc.lei
+
+cc.lei. SOASP ns1.cc.lei. 86400
+cc.lei. SOAADMIN dns\.admin.cc.lei. 86400
+cc.lei. SOASERIAL 0117102022 86400
+cc.lei. SOAREFRESH 14400 86400
+cc.lei. SOARETRY 3600 86400
+cc.lei. SOAEXPIRE 604800 86400
+
+g6e00.cc.lei. SOASP ns1.g6e00.cc.lei. 86400
+g6e00.cc.lei. SOAADMIN dns\.admin.g6e00.cc.lei. 86400
+g6e00.cc.lei. SOASERIAL 0117102022 86400
+g6e00.cc.lei. SOAREFRESH 14400 86400
+g6e00.cc.lei. SOARETRY 3600 86400
+g6e00.cc.lei. SOAEXPIRE 604800 86400
+
+cc.lei. NS ns1.cc.lei. 86400
+cc.lei. NS ns2.cc.lei. 86400
+cc.lei. NS ns3.cc.lei. 86400
+
+g6e00.cc.lei. NS ns1.g6e00.cc.lei. 86400
+g6e00.cc.lei. NS ns2.g6e00.cc.lei. 86400
+g6e00.cc.lei. NS ns3.g6e00.cc.lei. 86400
+
+cc.lei. MX mx1.cc.lei. 86400
+g6e00.cc.lei. MX mx1.g6e00.cc.lei. 86400
+
+ns1.cc.lei. A 10.2.2.1 86400
+ns2.cc.lei. A 10.3.3.1 86400
+ns3.cc.lei. A 10.4.4.12 86400
+ns1.g6e00.cc.lei. A 10.4.4.11 86400
+ns2.g6e00.cc.lei. A 10.2.2.2 86400
+ns3.g6e00.cc.lei. A 10.1.1.11 86400
+mx1.cc.lei. A 10.0.13.10 86400
+mx1.g6e00.cc.lei. A 10.0.13.12 86400
+
+
+

@@ -5,18 +5,10 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ClienteTesteTCPeTZ {
-/*    static int Numerodelinhas;
-    public void setNumerodelinhas(int numerodelinhas) {
-        this.Numerodelinhas = numerodelinhas;
-    }*/
-
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket("localhost", 5555);
 
-        SS ss = new SS(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
-  /*      ss.fillWithData("cc.lei. SOAADMIN dns.admin.example.com. 86400");
-        //ss.fillWithData("cc.lei. SOAADMIN dns.admin.example.com. 86400");
-        System.out.println("SOAADMIN" + ss.getSOAADMIN());*/
+        Server ss = new SS(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2], args[3]);
 
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -53,22 +45,11 @@ public class ClienteTesteTCPeTZ {
                 //if( (!socket.isClosed())) return;
                 contador++;
             }
-
-            //System.out.println("1221");
             //socket.shutdownInput();
             while ((serverResponse = in.readLine()) != null) {
                 //System.out.println(serverResponse);
                 ss.fillWithData(serverResponse);
             }
-
-            //ss.readSSData();
-
-/*            int i = 0;
-            for(String c : ss.getSPDataCopy()){
-                System.out.println( i + c);
-                i++;
-            }*/
-
             socket.close();
 
         } catch (Exception e) {

@@ -194,3 +194,13 @@
 14:12:2022.02:33:59:724 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
 14:12:2022.02:33:59:740 QR 0 Domain:null Type:null Response_Code:0
 14:12:2022.02:33:59:747 RE 0 Domain:null Type:null Response_Code:0
+20:12:2022.11:47:37:091 EV 127.0.0.1 conf-file-read var/dns/configFiles/configurationFile.txt
+20:12:2022.11:47:37:195 EV 127.0.0.1 db-file-read var/dns/dbFiles/example-com-db.txt
+21:12:2022.10:35:49:720 EZ 192.130.150.249:5555 Ocorreu um erro na Transferência de zona
+21:12:2022.10:40:58:218 EZ 192.130.150.249:5555 Ocorreu um erro na Transferência de zona
+21:12:2022.11:44:49:037 EZ 192.130.150.249:5555 Ocorreu um erro na Transferência de zona
+21:12:2022.11:45:18:701 EZ 192.130.150.249:5555 Ocorreu um erro na Transferência de zona
+21:12:2022.11:52:47:346 QR 0 Domain:null Type:null Response_Code:0
+21:12:2022.11:52:47:349 RE 0 Domain:null Type:null Response_Code:0
+21:12:2022.11:53:52:062 QR 59513 Domain:example.com. Type:NS Response_Code:0
+21:12:2022.11:53:52:064 RE 59513 Domain:example.com. Type:NS Response_Code:0

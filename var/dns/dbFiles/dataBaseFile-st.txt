@@ -1,0 +1,9 @@
+# Ficheiro de base de dados dos servidores de topo
+
+cc.lei. NS cc.lei. 86400
+rc.lei. NS rc.lei. 86400
+
+cc.lei. A 10.0.15.10 86400
+rc.lei. A 10.0.14.10 86400
+
+

@@ -1,0 +1,10 @@
+# Ficheiro de Configuracao para o servidor primario(SP) do dominio cc.lei 
+
+cc.lei DB var/dns/dbFiles/dataBaseFile-cc-lei-sp1.txt
+cc.lei SS 127.0.0.1
+cc.lei SS 10.3.3.1:5550
+cc.lei SS 10.4.4.10:5550
+cc.lei DD 127.0.0.1
+cc.lei LG var/dns/logFiles/cc-lei_SP1.log
+all LG var/dns/logFiles/cc-lei-all_SP1.log
+root ST var/dns/rootServers/rootservers.txt

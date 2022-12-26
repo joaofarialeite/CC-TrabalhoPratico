@@ -19,9 +19,7 @@ public class ClientTesteUDPsp {
     //dnscl 127.0.0.1 cc.lei. MX
     public static void main(String[] args) {
         try {
-            //
             DatagramSocket socket = new DatagramSocket();
-            //InetAddress address = InetAddress.getByName("localhost");
             InetAddress address = InetAddress.getByName(args[1]);
 
             // aqui falta por a ler a msg dos args e claro como é obvio falta depois trocar o argumento
@@ -30,19 +28,14 @@ public class ClientTesteUDPsp {
 
             String msg = args[0] + " " + args[1] + " " + args[2] + " " + args[3];
 
-
             //String msg = "dnscl 10.2.2.1 example.com. MX R";
             byte[] buf = msg.getBytes();
             DatagramPacket packet = new DatagramPacket(buf, buf.length, address, 5555);
             socket.send(packet);
-
-            //Thread.sleep(1000);
-
             byte[] bytes = new byte[65535];
             DatagramPacket resposta = new DatagramPacket(bytes, bytes.length);
             socket.receive(resposta);
             System.out.println(data(bytes));
-
             socket.close();
 
         } catch (Exception e) {

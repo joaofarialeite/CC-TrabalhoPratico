@@ -28,14 +28,11 @@ class SSWorkerUDP implements Runnable {
     }
 
     public void run() {
-
         try {
-
             InetAddress address = packet.getAddress();
             int port = packet.getPort();
             byte[] bytes = (ss.response(data(packet.getData()))).getBytes();
             DatagramPacket resposta = new DatagramPacket(bytes, bytes.length, address, port);
-
             socket.send(resposta);
 
         } catch (IOException e) {
@@ -49,7 +46,6 @@ class SSWorkerTCP implements Runnable {
     private SS ss;
 
     public void enviarficheiro(BufferedReader in, PrintWriter out) throws IOException {
-
         FileReader file = new FileReader(ss.getConfigurationFile().getDB());
         BufferedReader buffer = new BufferedReader(file);
         String line;
@@ -148,8 +144,8 @@ public class ServerTestarSS {
     // NAO ESQUECER DE MUDAR O CONFIGURATIONFILE PARA O SP PASSAR A SER O SERVIDOR1 E NAO O PCWINDOWS
     // E METER OS FICHEIROS CORE E DB TUDO NA MESMA PASTA AO TESTAR NO CORE (OS CAMINHOS LA DAO ERROS)
 
-    //CORE -> java ServerTestarSS 5550 12345 bash configurationFile-cc-lei-ss.txt
-    //PC -> 5550 12345 true var/dns/configFiles/configurationFile-cc-lei-ss.txt
+    //CORE -> java ServerTestarSS 5550 12345 bash configurationFile-cc-lei-ss1.txt
+    //PC -> 5550 12345 true var/dns/configFiles/configurationFile-cc-lei-ss1.txt
     //porta , timeout ,debug ,path
     public static void main(String[] args) throws IOException {
         SS ss = new SS(Integer.parseInt(args[0]), Integer.parseInt(args[1]), (args[2]), args[3]);

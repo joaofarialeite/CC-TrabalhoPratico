@@ -19,18 +19,16 @@ public class ClientTesteTCPNormal {
             String serverResponse;
             int contador = 0;
 
-            if((userInput = systemIn.readLine()) != null){
+            if ((userInput = systemIn.readLine()) != null) {
                 out.println(userInput);
                 out.flush();
 
                 String response = in.readLine();
-                while (response != null){
+                while (response != null) {
                     System.out.println(response);
                     response = in.readLine();
                 }
             }
-
-
             socket.close();
 
         } catch (Exception e) {

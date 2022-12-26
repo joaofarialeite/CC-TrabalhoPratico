@@ -111,8 +111,7 @@ public class DataBaseFile {
             DBLines++;
         }
         // escreve no ficheiro de log a entrada que corresponde à leitura da base de dados do servidor
-        this.cf.getLf().writeIntoLogFile(this.cf.getLogFile(), "EV " + this.cf.getDD() + " db-file-read " + this.cf.getDB());
-        //System.out.println("Tudo válido!");
+//        this.cf.getLf().writeIntoLogFile(this.cf.getLogFile(), "EV " + this.cf.getDD() + " db-file-read " + this.cf.getDB());
         buffer.close();
         file.close();
     }

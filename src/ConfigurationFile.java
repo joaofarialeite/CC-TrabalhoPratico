@@ -61,20 +61,24 @@ public class ConfigurationFile {
             }
         }
 
-        file = new FileReader(this.ST);
-        buffer = new BufferedReader(file);
+        if (!(this.ST == null)) {
+            file = new FileReader(this.ST);
+            buffer = new BufferedReader(file);
 
-        while (buffer.ready()) {
-            String line = String.valueOf(buffer.readLine());
-            if (line.startsWith("#") || line.isBlank()) continue;
-            else this.rootServers.add(line);
+            /*
+            adiciona os rootServers
+            */
+            while (buffer.ready()) {
+                String line = String.valueOf(buffer.readLine());
+                if (line.startsWith("#") || line.isBlank()) continue;
+                else this.rootServers.add(line);
+            }
         }
 
         associatePortToIP();
 
         // escreve no ficheiro de log a entrada que corresponde a uma leitura do ficheiro de configuração
-        this.lf.writeIntoLogFile(this.logFile, "EV".concat(" ").concat(this.DD.concat(" ").concat("conf-file-read").concat(" ").concat(filePath)));
-
+//        this.lf.writeIntoLogFile(this.logFile, "EV".concat(" ").concat(this.DD.concat(" ").concat("conf-file-read").concat(" ").concat(filePath)));
 
         buffer.close();
         file.close();

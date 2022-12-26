@@ -44,14 +44,68 @@ public class Cache {
         this.lines.add(entry);
     }
 
-    /*
-    Nesta função, vamos considerar que quando é dado um index == 0, então a procura vai ser feita através do tuplo (name, type)
+    public List<String> findIPAdresses() {
+        List<String> aux = new ArrayList<>();
+        for (String line : this.lines) {
+            String[] splitLine = line.split(" ");
+            if (splitLine[1].equals("A") && splitLine[9].equals("VALID"))
+                aux.add(entryConvert(line));
+        }
+        return aux;
+    }
+
+    public Map<String, List<String>> findServidoresAutoritativos() {
+        Map<String, List<String>> servidoresAutoritativos = new HashMap<>();
+        for (String line : this.lines) {
+            String[] splitLine = line.split(" ");
+            if (splitLine[1].equals("NS") && splitLine[9].equals("VALID")) {
+                if (servidoresAutoritativos.containsKey(splitLine[0]))
+                    servidoresAutoritativos.get(splitLine[0]).add(entryConvert(line));
+                else {
+                    List<String> novo = new ArrayList<>();
+                    novo.add(entryConvert(line));
+                    servidoresAutoritativos.put(splitLine[0], novo);
+                }
+            }
+        }
+        return servidoresAutoritativos;
+    }
+
+    public Map<String, List<String>> findServidoresEmail() {
+        Map<String, List<String>> servidoresEmail = new HashMap<>();
+        for (String line : this.lines) {
+            String[] splitLine = line.split(" ");
+            if (splitLine[1].equals("MX") && splitLine[9].equals("VALID")) {
+                if (servidoresEmail.containsKey(splitLine[0]))
+                    servidoresEmail.get(splitLine[0]).add(entryConvert(line));
+                else {
+                    List<String> novo = new ArrayList<>();
+                    novo.add(entryConvert(line));
+                    servidoresEmail.put(splitLine[0], novo);
+                }
+            }
+        }
+        return servidoresEmail;
+    }
+
+    public String getSOAEXPIRE() {
+        for (String entry : this.lines) {
+            String[] splitEntry = entry.split(" ");
+            if (splitEntry[1].equals("SOAEXPIRE")) return splitEntry[2];
+        }
+        return null;
+    }
+
+    /**
+     * Nesta função, vamos considerar que quando é dado um index == 0, então a procura vai ser feita através do tuplo (name, type)
+     * Sempre que queremos encontrar uma entrada na cache, a posição dessa entrada é sempre o indice da posição desta entrada - 1.
      */
     public int findEntry(int index, String name, String type) {
-        for (; index < this.lines.size(); index++) {
+        update();
+        for (; index - 1 < this.lines.size(); index++) {
             String[] splitEntry = this.lines.get(index).split(" ");
             if (splitEntry[0].equals(name) && splitEntry[1].equals(type) && splitEntry[9].equals("VALID"))
-                return index + 1;
+                return index;
         }
         return -1;
     }
@@ -60,12 +114,13 @@ public class Cache {
     função que encontra todas as entradas que fazem match com o tuplo (name, type)
      */
     public List<Integer> findEntries(int index, String name, String type) {
+        update();
         List<Integer> entries = new ArrayList<>();
 
-        for (; index < this.lines.size(); index++) {
+        for (; index - 1 < this.lines.size(); index++) {
             String[] splitEntry = this.lines.get(index).split(" ");
             if (splitEntry[0].equals(name) && splitEntry[1].equals(type) && splitEntry[9].equals("VALID"))
-                entries.add(index + 1);
+                entries.add(index);
         }
         return entries;
     }
@@ -74,39 +129,55 @@ public class Cache {
         for (int i = 0; i < this.lines.size(); i++) {
             String[] splitEntry = this.lines.get(i).split(" ");
             String concat = splitEntry[6].concat(" ").concat(splitEntry[7]);
-            if ((Timestamp.valueOf(LocalDateTime.now()).getTime() - Timestamp.valueOf(concat).getTime() > Long.parseLong(splitEntry[3])))
-                this.lines.remove(i);
+            if ((Timestamp.valueOf(LocalDateTime.now()).getTime() - Timestamp.valueOf(concat).getTime() > Long.parseLong(splitEntry[3])) && splitEntry[9].equals("VALID")) {
+                String aux = this.lines.get(i);
+                aux = aux.replace("VALID", "FREE");
+                this.lines.set(i, aux);
+            }
         }
+    }
+
+    public String entryConvert(String entry) {
+        String[] splitEntry = entry.split(" ");
+        return splitEntry[0] + " " + splitEntry[1] + " " + splitEntry[2] + " " + splitEntry[3] + " " + splitEntry[4];
     }
 
     /*
     Apenas para os SS. Quando o temporizador associado à idade da base de dados dum SS relativo a um domínio
     atinge o valor de SOAEXPIRE, todas as entradas com o name igual ao domínio passado como parâmetro são atualizadas para FREE.
      */
-    /*public void SSDataExpire(String domain) {
-        for (String entry : this.lines) {
-            String[] splitEntry = entry.split(" ");
-            if (splitEntry[0].equals(domain) && splitEntry[5].equals("SS")) {
-                String newEntry = entry;
-                this.lines.remove(entry);
-                newEntry = newEntry.replace(splitEntry[9], "FREE");
-                this.lines.add(newEntry);
+    public void SSDataExpire(String domain) {
+        for (int i = 0; i < this.lines.size(); i++) {
+            String[] splitEntry = this.lines.get(i).split(" ");
+            String concat = splitEntry[6].concat(" ").concat(splitEntry[7]);
+            if (splitEntry[0].equals(domain) && splitEntry[5].equals("SP")) {
+                if ((Timestamp.valueOf(LocalDateTime.now()).getTime() - Timestamp.valueOf(concat).getTime() > Long.parseLong(getSOAEXPIRE())) && splitEntry[9].equals("VALID")) {
+                    String aux = this.lines.get(i);
+                    aux = aux.replace("VALID", "FREE");
+                    this.lines.set(i, aux);
+                }
             }
         }
-    }*/
+    }
 
     public ArrayList<String> getLines() {
         return this.lines;
     }
 
+    /**
+     * Testes para a cache.
+     */
     public static void main(String[] args) {
-        Cache lines = new Cache();
-        lines.addEntryToCache("www A 193.136.130.79 86400 200", "SP", Timestamp.valueOf(LocalDateTime.of(2022, 12, 6, 20, 33)));
-        lines.addEntryToCache("ns1 A 193.136.130.250 86400", "SS", Timestamp.valueOf(LocalDateTime.now()));
-        lines.addEntryToCache("www A 193.136.130.80 86400 200", "SP", Timestamp.valueOf(LocalDateTime.now()));
-        lines.addEntryToCache("www A 193.136.130.81 86400 200", "SS", Timestamp.valueOf(LocalDateTime.of(2022, 12, 8, 0, 34)));
-        lines.update();
-        //System.out.println(lines.findEntries(0, "www", "A"));
-        System.out.println(lines.getLines());
+        Cache cache = new Cache();
+        cache.addEntryToCache("cc.lei. SOAEXPIRE 604800 86400", "SP", Timestamp.valueOf(LocalDateTime.of(2022, 12, 18, 12, 39)));
+        cache.addEntryToCache("cc.lei. NS ns1.cc.lei. 86399", "SP", Timestamp.valueOf(LocalDateTime.of(2022, 12, 21, 12, 39)));
+        cache.addEntryToCache("cc.lei. NS ns2.cc.lei. 86400", "SP", Timestamp.valueOf(LocalDateTime.of(2022, 12, 20, 12, 39)));
+        cache.addEntryToCache("g6e00.cc.lei. NS ns1.g6e00.cc.lei. 86400", "TEST", Timestamp.valueOf(LocalDateTime.of(2022, 12, 20, 12, 39)));
+        cache.addEntryToCache("cc.lei. MX mx1.cc.lei 86400 10", "TEST", Timestamp.valueOf(LocalDateTime.now()));
+
+        cache.SSDataExpire("cc.lei.");
+        //cache.findEntry(0, "cc.lei.", "NS");
+        for (String entry : cache.getLines())
+            System.out.println(entry);
     }
 }

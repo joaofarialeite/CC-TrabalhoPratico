@@ -28,19 +28,15 @@ public class ClientTesteUDPss {
 
             String msg = args[0] + " " + args[1] + " " + args[2] + " " + args[3];
 
-
             //String msg = "dnscl 10.2.2.1 example.com. MX R";
             byte[] buf = msg.getBytes();
             DatagramPacket packet = new DatagramPacket(buf, buf.length, address, 5550);
             socket.send(packet);
-
             //Thread.sleep(1000);
-
             byte[] bytes = new byte[65535];
             DatagramPacket resposta = new DatagramPacket(bytes, bytes.length);
             socket.receive(resposta);
             System.out.println(data(bytes));
-
             socket.close();
 
         } catch (Exception e) {
